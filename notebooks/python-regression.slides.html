@@ -13583,6 +13583,15 @@ problems.
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>mean absolute error (MSE):
+$$mse(y, \hat{y}) = \frac{1}{n_{samples}} \sum_{i=1}^{n_{samples}} \lvert y_i - \hat{y_i} \rvert$$</p>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[35]:</div>
@@ -13682,6 +13691,16 @@ problems.
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="How-do-we-find-$\beta_i$?">How do we find $\beta_i$?<a class="anchor-link" href="#How-do-we-find-$\beta_i$?">&#182;</a></h3><p>$\boldsymbol{Y} = \boldsymbol{X}\beta + \epsilon$</p>
+<p>From linear algebra we know how to solve $\boldsymbol{A}x = \boldsymbol{b}$:</p>
+<p>$x = \boldsymbol{A}^{-1}\boldsymbol{b}$</p>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[38]:</div>
@@ -13786,6 +13805,16 @@ problems.
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Solve-via-QR-Decomposition">Solve via QR Decomposition<a class="anchor-link" href="#Solve-via-QR-Decomposition">&#182;</a></h3><p>$A = QR$</p>
+<p>where A is the matrix that we wish to decompose, Q is a matrix with the size n x n, and R is an upper triangle matrix with the size n x m.</p>
+<p>$x = R^{-1}Q^Tb$</p>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[41]:</div>

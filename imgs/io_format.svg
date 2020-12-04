@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="414.27975"
+   height="286.66858"
+   version="1.1"
+   id="svg879"
+   sodipodi:docname="io_format.svg"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)">
+  <metadata
+     id="metadata885">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs883">
+    <defs
+       id="defs875">
+      <path
+         id="e"
+         d="M 182,0 120,-99 58,0 H 3 L 89,-130 10,-248 h 55 l 55,88 55,-88 h 55 l -75,118 82,130 h -55"
+         fill="#045174" />
+      <use
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         id="a"
+         xlink:href="#e"
+         transform="scale(0.09259259)" />
+      <path
+         id="f"
+         d="M 190,0 58,-211 59,0 H 30 v -248 h 39 l 133,213 -2,-213 h 31 V 0 h -41"
+         fill="#045174" />
+      <use
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         id="b"
+         xlink:href="#f"
+         transform="scale(0.0617284)" />
+      <path
+         id="g"
+         d="m 240,0 2,-218 C 219,-142 188,-73 162,0 H 139 L 58,-218 59,0 H 30 v -248 h 44 l 77,211 c 21,-75 51,-140 76,-211 h 43 V 0 h -30"
+         fill="#045174" />
+      <use
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         id="c"
+         xlink:href="#g"
+         transform="scale(0.0617284)" />
+      <path
+         id="h"
+         d="M 123,10 C 108,53 80,86 19,72 V 37 C 54,45 72,26 78,-2 L 3,-190 h 52 l 48,148 c 12,-52 28,-100 44,-148 h 51"
+         fill="#045174" />
+      <use
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         id="d"
+         xlink:href="#h"
+         transform="scale(0.07407407)" />
+    </defs>
+  </defs>
+  <sodipodi:namedview
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1732"
+     inkscape:window-height="851"
+     id="namedview881"
+     showgrid="true"
+     inkscape:zoom="1.3477407"
+     inkscape:cx="189.98105"
+     inkscape:cy="175.90525"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg879">
+    <inkscape:grid
+       originy="24.809038"
+       originx="26.744899"
+       id="grid67"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <path
+     id="path833"
+     fill="#e1ecf0"
+     stroke-width="3.05131"
+     stroke="#045174"
+     d="m 60.33,60 h 160 v 200 h -160 z" />
+  <use
+     height="100%"
+     width="100%"
+     y="0"
+     x="0"
+     id="use835"
+     transform="translate(129.22105,169.08333)"
+     xlink:href="#a" />
+  <path
+     id="path837"
+     fill="none"
+     d="m -26,72.67 c 0,-3.32 2.7,-6 6,-6 h 68 c 3.3,0 6,2.68 6,6 V 254 c 0,3.3 -2.7,6 -6,6 h -68 c -3.3,0 -6,-2.7 -6,-6 z" />
+  <path
+     id="path839"
+     fill="none"
+     stroke-width="3.04513"
+     stroke="#045174"
+     d="m 54,260 c -5.52,0 -10,-4.61581 -10,-10.30316 v -78.99431 c 0,-5.68735 -4.48,-10.30316 -10,-10.30316 5.52,0 10,-4.60551 10,-10.30316 V 71.112196 C 44,65.41455 48.48,60.809038 54,60.809038" />
+  <use
+     height="100%"
+     width="100%"
+     y="0"
+     x="0"
+     id="use841"
+     transform="translate(13.012346,168.11111)"
+     xlink:href="#b" />
+  <g
+     transform="translate(-26,-24)"
+     id="g847"
+     fill="none">
+    <path
+       id="path843"
+       d="m 241.67,0 c 3.3,0 6,2.7 6,6 v 68 c 0,3.3 -2.7,6 -6,6 H 92.33 c -3.3,0 -6,-2.7 -6,-6 V 6 c 0,-3.3 2.7,-6 6,-6 z" />
+    <path
+       id="path845"
+       stroke-width="3"
+       stroke="#045174"
+       d="m 86.33,80 c 0,-5.52 4.48,-10 10,-10 H 157 c 5.52,0 10,-4.48 10,-10 0,5.52 4.48,10 10,10 h 60.67 c 5.52,0 10,4.48 10,10" />
+  </g>
+  <path
+     id="path849"
+     fill="none"
+     d="m 126.77,17.66 c 0,-3.32 2.68,-6 6,-6 h 16.46 c 3.32,0 6,2.68 6,6 v 24.67 c 0,3.32 -2.68,6 -6,6 h -16.46 c -3.32,0 -6,-2.68 -6,-6 z" />
+  <use
+     height="100%"
+     width="100%"
+     y="0"
+     x="0"
+     id="use851"
+     transform="translate(131.76543,32.434444)"
+     xlink:href="#c" />
+  <path
+     id="path853"
+     fill="#e1ecf0"
+     stroke-width="3.33608"
+     stroke="#045174"
+     d="M 336.72827,259.12754 V 60.809038 h 49.88346 V 259.12754 Z" />
+  <use
+     height="100%"
+     width="100%"
+     y="0"
+     x="0"
+     id="use855"
+     transform="translate(356.07823,164.88311)"
+     xlink:href="#d" />
+  <g
+     transform="matrix(0,-1.2396951,1,0,182.34,642.22604)"
+     id="g861"
+     fill="none">
+    <path
+       id="path857"
+       d="m 463,68.33 c 3.3,0 6,2.7 6,6 v 68 c 0,3.32 -2.7,6 -6,6 H 313.67 c -3.32,0 -6,-2.68 -6,-6 v -68 c 0,-3.3 2.68,-6 6,-6 z" />
+    <path
+       id="path859"
+       stroke-width="3"
+       stroke="#045174"
+       d="m 307.67,148.33 c 0,-5.52 4.47,-10 10,-10 h 60.66 c 5.53,0 10,-4.47 10,-10 0,5.53 4.48,10 10,10 H 459 c 5.52,0 10,4.48 10,10" />
+  </g>
+  <path
+     id="path863"
+     fill="none"
+     d="m 347.43,81.33 c 0,-3.3 2.7,-6 6,-6 h 16.47 c 3.3,0 6,2.7 6,6 V 106 c 0,3.32 -2.7,6 -6,6 h -16.47 c -3.3,0 -6,-2.68 -6,-6 z" />
+  <use
+     xlink:href="#b"
+     transform="translate(289.64062,166.43181)"
+     id="use841-4"
+     x="0"
+     y="0"
+     width="100%"
+     height="100%" />
+</svg>
