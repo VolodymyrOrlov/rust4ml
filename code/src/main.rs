@@ -62,10 +62,10 @@ impl<'a> ArgminOp for BinaryObjectiveFunction<'a> {
 
         for i in 0..n {
             let wx = dot(w, &self.x, i);
-            f += wx.exp().ln_1p() - self.y[i] * wx;
+            f += self.y[i] * sigmoid(wx).ln() + (1.0 - self.y[i]) * (1.0 - sigmoid(wx)).ln();            
         }
         
-        Ok(f)
+        Ok(-f)
     }
 
     fn gradient(&self, w: &Self::Param) -> Result<Self::Param, Error> {

@@ -13213,9 +13213,18 @@ a.anchor-link {
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Credit-Card-Fraud-Detection">Credit Card Fraud Detection<a class="anchor-link" href="#Credit-Card-Fraud-Detection">&#182;</a></h3><p>Anonymized credit card transactions labeled as fraudulent or genuine
+The datasets contains transactions made by credit cards in September 2013 by european cardholders, <a href="https://www.kaggle.com/mlg-ulb/creditcardfraud">https://www.kaggle.com/mlg-ulb/creditcardfraud</a></p>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">credit</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/creditcard.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">31</span><span class="p">))</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">])</span>
@@ -13228,7 +13237,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">credit</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -13244,7 +13253,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -13272,17 +13281,7 @@ a.anchor-link {
       <th>3</th>
       <th>4</th>
       <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-      <th>10</th>
       <th>...</th>
-      <th>22</th>
-      <th>23</th>
-      <th>24</th>
-      <th>25</th>
-      <th>26</th>
       <th>27</th>
       <th>28</th>
       <th>29</th>
@@ -13298,17 +13297,7 @@ a.anchor-link {
       <td>6.866198</td>
       <td>-11.838269</td>
       <td>4.194211</td>
-      <td>-6.923097</td>
-      <td>-3.221147</td>
-      <td>-7.553497</td>
-      <td>6.015618</td>
-      <td>-2.466143</td>
       <td>...</td>
-      <td>0.918244</td>
-      <td>-0.715366</td>
-      <td>0.210747</td>
-      <td>-0.060211</td>
-      <td>0.509535</td>
       <td>-0.257284</td>
       <td>1.170027</td>
       <td>0.229301</td>
@@ -13322,17 +13311,7 @@ a.anchor-link {
       <td>-1.397657</td>
       <td>1.060475</td>
       <td>1.853782</td>
-      <td>-1.567525</td>
-      <td>-0.101651</td>
-      <td>-0.293445</td>
-      <td>-0.040290</td>
-      <td>2.029798</td>
       <td>...</td>
-      <td>0.364551</td>
-      <td>0.276651</td>
-      <td>-0.442972</td>
-      <td>0.339378</td>
-      <td>0.138196</td>
       <td>-0.322527</td>
       <td>-0.043856</td>
       <td>0.114197</td>
@@ -13346,17 +13325,7 @@ a.anchor-link {
       <td>0.608590</td>
       <td>1.155501</td>
       <td>-0.267565</td>
-      <td>-0.563748</td>
-      <td>-0.618898</td>
-      <td>0.698308</td>
-      <td>0.069837</td>
-      <td>-0.133341</td>
       <td>...</td>
-      <td>0.130749</td>
-      <td>0.239389</td>
-      <td>-0.090227</td>
-      <td>0.411572</td>
-      <td>-0.216126</td>
       <td>0.353896</td>
       <td>-0.062361</td>
       <td>0.008433</td>
@@ -13370,17 +13339,7 @@ a.anchor-link {
       <td>-0.636692</td>
       <td>-0.042066</td>
       <td>0.297683</td>
-      <td>-1.121546</td>
-      <td>-0.659744</td>
-      <td>-0.639831</td>
-      <td>0.005423</td>
-      <td>1.168590</td>
       <td>...</td>
-      <td>0.300163</td>
-      <td>0.994098</td>
-      <td>0.148757</td>
-      <td>0.603600</td>
-      <td>-0.282014</td>
       <td>0.064710</td>
       <td>0.006358</td>
       <td>-0.037481</td>
@@ -13394,17 +13353,7 @@ a.anchor-link {
       <td>2.225832</td>
       <td>-0.759633</td>
       <td>0.717697</td>
-      <td>1.867873</td>
-      <td>-0.750556</td>
-      <td>1.230181</td>
-      <td>0.009470</td>
-      <td>-1.105051</td>
       <td>...</td>
-      <td>-0.154681</td>
-      <td>-0.403606</td>
-      <td>-0.539681</td>
-      <td>-1.079889</td>
-      <td>0.804893</td>
       <td>-0.232891</td>
       <td>-0.465452</td>
       <td>-0.142328</td>
@@ -13517,7 +13466,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[42]:</div>

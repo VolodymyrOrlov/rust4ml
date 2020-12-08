@@ -13080,7 +13080,7 @@ ul.typeahead-list  > li > a.pull-right {
   padding: 0.4em;
   margin: 0px;
   font-family: monospace, sans-serif;
-  font-size: 80%;
+  font-size: 70%;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 .reveal pre code {
@@ -13155,7 +13155,7 @@ div.prompt {
 }
 div.output_area pre {
   font-family: monospace, sans-serif;
-  font-size: 80%;
+  font-size: 50%;
 }
 div.output_prompt {
   /* 5px right shift to account for margin in parent container */
@@ -13201,7 +13201,7 @@ a.anchor-link {
 <section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span>:<span class="nc">dep</span><span class="w"> </span><span class="n">smartcore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.1.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">features</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;nalgebra-bindings&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ndarray-bindings&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;datasets&quot;</span><span class="p">]}</span><span class="w"></span>
@@ -13359,9 +13359,18 @@ a.anchor-link {
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sigmoid-function">Sigmoid function<a class="anchor-link" href="#Sigmoid-function">&#182;</a></h2><p>$\sigma(x) = \frac{1}{1 + e^{-x}}$</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" alt="title"></p>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">fn</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">v</span>: <span class="kt">f64</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">f64</span> <span class="p">{</span><span class="w"></span>
@@ -13379,28 +13388,164 @@ a.anchor-link {
 </div>
 </div>
 
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h2><ul>
+<li>Estimated probability (our response is either 1 or 0): $P(X) = \sigma({X}\beta)$</li>
+<li>Cost function: 
+$$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 - \sigma({X}\beta))]$$</li>
+<li>Derivative: $\frac{\partial J(\beta)}{\partial \beta} = \frac{1}{n} X^T(\sigma(X\beta) - y)$</li>
+</ul>
+
+</div>
+</div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="k">fn</span> <span class="nf">dot</span><span class="p">(</span><span class="n">w</span>: <span class="kp">&amp;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span>: <span class="kp">&amp;</span><span class="nc">DMatrix</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">m_row</span>: <span class="kt">usize</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">f64</span> <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">f64</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">_</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">shape</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">0</span><span class="p">..</span><span class="n">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">x</span><span class="p">[(</span><span class="n">m_row</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class=" highlight hl-Rust"><pre><span></span><span class="c1">// y_true = 1.0, y_hat -&gt; +inf</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">y_hat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.0</span><span class="p">;</span><span class="w"></span>
+<span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmoid</span><span class="p">(</span><span class="n">y_hat</span><span class="p">).</span><span class="n">ln</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sigmoid</span><span class="p">(</span><span class="n">y_hat</span><span class="p">)).</span><span class="n">ln</span><span class="p">()</span><span class="w"></span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section></section><section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[87]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-0.00004539889921682063</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Rust"><pre><span></span><span class="c1">// y_true = 1.0, y_hat -&gt; -inf</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">y_hat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">10.0</span><span class="p">;</span><span class="w"></span>
+<span class="n">sigmoid</span><span class="p">(</span><span class="n">y_hat</span><span class="p">).</span><span class="n">ln</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sigmoid</span><span class="p">(</span><span class="n">y_hat</span><span class="p">)).</span><span class="n">ln</span><span class="p">()</span><span class="w"></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[81]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-10.000045398899218</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Rust"><pre><span></span><span class="c1">// y_true = 0.0, y_hat -&gt; +inf</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">y_hat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.0</span><span class="p">;</span><span class="w"></span>
+<span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmoid</span><span class="p">(</span><span class="n">y_hat</span><span class="p">).</span><span class="n">ln</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sigmoid</span><span class="p">(</span><span class="n">y_hat</span><span class="p">)).</span><span class="n">ln</span><span class="p">()</span><span class="w"></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[82]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-10.000045398900186</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Rust"><pre><span></span><span class="c1">// y_true = 0.0, y_hat -&gt; -inf</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">y_hat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">10.0</span><span class="p">;</span><span class="w"></span>
+<span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmoid</span><span class="p">(</span><span class="n">y_hat</span><span class="p">).</span><span class="n">ln</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sigmoid</span><span class="p">(</span><span class="n">y_hat</span><span class="p">)).</span><span class="n">ln</span><span class="p">()</span><span class="w"></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[83]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-0.00004539889921682063</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
@@ -13429,18 +13574,20 @@ a.anchor-link {
 <span class="w">    </span><span class="k">type</span> <span class="nc">Jacobian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="k">type</span> <span class="nc">Float</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">f64</span><span class="p">;</span><span class="w"></span>
 
+<span class="w">    </span><span class="c1">// cost function at point w</span>
 <span class="w">    </span><span class="k">fn</span> <span class="nf">apply</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">w</span>: <span class="kp">&amp;</span><span class="nc">Self</span>::<span class="n">Param</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="n">Self</span>::<span class="n">Output</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="k">f64</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="n">shape</span><span class="p">();</span><span class="w"></span>
 
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">0</span><span class="p">..</span><span class="n">n</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">wx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="bp">self</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">f</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">wx</span><span class="p">.</span><span class="n">exp</span><span class="p">().</span><span class="n">ln_1p</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">wx</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">f</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmoid</span><span class="p">(</span><span class="n">wx</span><span class="p">).</span><span class="n">ln</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sigmoid</span><span class="p">(</span><span class="n">wx</span><span class="p">)).</span><span class="n">ln</span><span class="p">();</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">        </span>
-<span class="w">        </span><span class="nb">Ok</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="nb">Ok</span><span class="p">(</span><span class="o">-</span><span class="n">f</span><span class="p">)</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
+<span class="w">    </span><span class="c1">// the gradient of the cost function at the point w</span>
 <span class="w">    </span><span class="k">fn</span> <span class="nf">gradient</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">w</span>: <span class="kp">&amp;</span><span class="nc">Self</span>::<span class="n">Param</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="n">Self</span>::<span class="n">Param</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="n">shape</span><span class="p">();</span><span class="w"></span>
 <span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="k">f64</span><span class="p">;</span><span class="w"> </span><span class="n">w</span><span class="p">.</span><span class="n">len</span><span class="p">()];</span><span class="w"></span>
