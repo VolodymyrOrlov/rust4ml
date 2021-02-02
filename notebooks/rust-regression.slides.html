@@ -13204,11 +13204,8 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span>:<span class="nc">dep</span><span class="w"> </span><span class="n">smartcore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.1.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">features</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;nalgebra-bindings&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ndarray-bindings&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;datasets&quot;</span><span class="p">]}</span><span class="w"></span>
-:<span class="nc">dep</span><span class="w"> </span><span class="n">csv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1.1.5&quot;</span><span class="w"></span>
-:<span class="nc">dep</span><span class="w"> </span><span class="n">ndarray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.13.1&quot;</span><span class="w"></span>
-:<span class="nc">dep</span><span class="w"> </span><span class="n">ndarray</span><span class="o">-</span><span class="n">csv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.4.1&quot;</span><span class="w"></span>
-:<span class="nc">dep</span><span class="w"> </span><span class="n">nalgebra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.22.0&quot;</span><span class="w"></span>
+<div class=" highlight hl-Rust"><pre><span></span>:<span class="nc">dep</span><span class="w"> </span><span class="n">smartcore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.2.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">features</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;nalgebra-bindings&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;datasets&quot;</span><span class="p">]}</span><span class="w"></span>
+:<span class="nc">dep</span><span class="w"> </span><span class="n">nalgebra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.23.0&quot;</span><span class="w"></span>
 </pre></div>
 
     </div>
@@ -13221,7 +13218,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">nalgebra</span>::<span class="p">{</span><span class="n">DMatrix</span><span class="p">,</span><span class="w"> </span><span class="n">DVector</span><span class="p">,</span><span class="w"> </span><span class="n">RowDVector</span><span class="p">,</span><span class="w"> </span><span class="n">Scalar</span><span class="p">};</span><span class="w"></span>
+<div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">nalgebra</span>::<span class="p">{</span><span class="n">DMatrix</span><span class="p">,</span><span class="w"> </span><span class="n">DVector</span><span class="p">,</span><span class="w"> </span><span class="n">Scalar</span><span class="p">};</span><span class="w"></span>
 </pre></div>
 
     </div>
@@ -13266,7 +13263,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">bos</span><span class="p">.</span><span class="n">rows</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span><span class="w"></span>
@@ -13303,10 +13300,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bos</span><span class="p">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">).</span><span class="n">into_owned</span><span class="p">();</span><span class="w"></span>
@@ -13324,7 +13321,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -13341,7 +13338,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">rows</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span><span class="w"></span>
@@ -13392,7 +13389,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">smartcore</span>::<span class="n">model_selection</span>::<span class="n">train_test_split</span><span class="p">;</span><span class="w"></span>
@@ -13408,7 +13405,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="n">x_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="n">y_test</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">train_test_split</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">.</span><span class="n">transpose</span><span class="p">(),</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span><span class="w"></span>
+<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="n">x_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="n">y_test</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">train_test_split</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">.</span><span class="n">transpose</span><span class="p">(),</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"></span>
 <span class="p">(</span><span class="n">x_train</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">y_train</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">x_test</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">y_test</span><span class="p">.</span><span class="n">shape</span><span class="p">())</span><span class="w"></span>
 </pre></div>
 
@@ -13428,7 +13425,7 @@ a.anchor-link {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>((400, 13), (1, 400), (106, 13), (1, 106))</pre>
+<pre>((405, 13), (1, 405), (101, 13), (1, 101))</pre>
 </div>
 
 </div>
@@ -13439,7 +13436,7 @@ a.anchor-link {
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x_train</span><span class="p">.</span><span class="n">clone</span><span class="p">().</span><span class="n">insert_column</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">).</span><span class="n">into_owned</span><span class="p">();</span><span class="w"></span>
@@ -13457,13 +13454,13 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>((400, 14), (400, 1))</pre>
+<pre>((405, 14), (405, 1))</pre>
 </div>
 
 </div>
@@ -13474,7 +13471,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">rows</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span><span class="w"></span>
@@ -13496,14 +13493,12 @@ a.anchor-link {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
   ┌                                                                                                                 ┐
-  │ 0.00632      18    2.31       0   0.538   6.575    65.2    4.09       1     296    15.3   396.9    4.98       1 │
-  │ 0.02731       0    7.07       0   0.469   6.421    78.9  4.9671       2     242    17.8   396.9    9.14       1 │
-  │ 0.02729       0    7.07       0   0.469   7.185    61.1  4.9671       2     242    17.8  392.83    4.03       1 │
-  │ 0.03237       0    2.18       0   0.458   6.998    45.8  6.0622       3     222    18.7  394.63    2.94       1 │
-  │ 0.02985       0    2.18       0   0.458    6.43    58.7  6.0622       3     222    18.7  394.12    5.21       1 │
+  │ 8.15174       0    18.1       0     0.7    5.39    98.9  1.7281      24     666    20.2   396.9   20.85       1 │
+  │ 2.36862       0   19.58       0   0.871   4.926    95.7  1.4608       5     403    14.7  391.71   29.53       1 │
+  │  0.0351      95    2.68       0  0.4161   7.853    33.2   5.118       4     224    14.7  392.78    3.81       1 │
+  │ 2.73397       0   19.58       0   0.871   5.597    94.9  1.5257       5     403    14.7  351.85   21.45       1 │
+  │ 41.5292       0    18.1       0   0.693   5.531    85.4  1.6074      24     666    20.2  329.46   27.38       1 │
   └                                                                                                                 ┘
-
-
 </pre>
 </div>
 </div>
@@ -13514,7 +13509,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="c1">// A.T.dot(A)</span>
@@ -13531,10 +13526,29 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;coeff: {}, intercept: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">coeff</span><span class="p">,</span><span class="w"> </span><span class="n">intercept</span><span class="p">);</span><span class="w"></span>
@@ -13555,23 +13569,23 @@ a.anchor-link {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>coeff: 
-  ┌                        ┐
-  │   -0.11963654326069977 │
-  │    0.03863925768072219 │
-  │    0.06701609736776759 │
-  │      2.629438790269493 │
-  │    -20.967597318475992 │
-  │      4.103904424216561 │
-  │ -0.0004976572448299054 │
-  │    -1.5323807191103553 │
-  │    0.35048193952706325 │
-  │  -0.014317291144891548 │
-  │    -0.9360162870498203 │
-  │   0.007758241070873607 │
-  │    -0.5686368353651949 │
-  └                        ┘
+  ┌                       ┐
+  │  -0.06162990533095337 │
+  │   0.04300822718705109 │
+  │   0.06536511761697435 │
+  │    3.1530150444836917 │
+  │     -19.5870126994823 │
+  │    3.6945169534169398 │
+  │  0.006685009127805426 │
+  │   -1.3921812097201318 │
+  │    0.3110429415073153 │
+  │ -0.012486793494871928 │
+  │    -0.974980194868809 │
+  │  0.010996331673317889 │
+  │   -0.5546406878182586 │
+  └                       ┘
 
-, intercept: 37.433089824034546
+, intercept: 37.10300123020261
 </pre>
 </div>
 </div>
@@ -13582,7 +13596,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">y_hat_inv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x_test</span><span class="p">.</span><span class="n">clone</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&amp;</span><span class="n">coeff</span><span class="p">).</span><span class="n">add_scalar</span><span class="p">(</span><span class="n">intercept</span><span class="p">);</span><span class="w"></span>
@@ -13595,7 +13609,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">smartcore</span>::<span class="n">metrics</span>::<span class="n">mean_absolute_error</span><span class="p">;</span><span class="w"></span>
@@ -13608,7 +13622,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_hat_inv</span><span class="p">.</span><span class="n">transpose</span><span class="p">())</span><span class="w"></span>
@@ -13624,56 +13638,15 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3.1081864959381837</pre>
+<pre>2.905824437461634</pre>
 </div>
 
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;y_hat: {}, y_true: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y_hat_inv</span><span class="p">.</span><span class="n">transpose</span><span class="p">().</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">),</span><span class="w"> </span><span class="n">y_test</span><span class="p">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>y_hat: 
-  ┌                                                                                                ┐
-  │  28.39971210805418 18.231029547358542 20.916178691198844 10.768226700423511 13.423367602416278 │
-  └                                                                                                ┘
-
-, y_true: 
-  ┌                          ┐
-  │ 36.2 18.2   21 12.7 13.5 │
-  └                          ┘
-
-
-</pre>
-</div>
 </div>
 
 </div>
@@ -13682,7 +13655,7 @@ a.anchor-link {
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="c1">// Q, R = np.linalg.qr(A)</span>
@@ -13702,7 +13675,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;coeff: {}, intercept: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">coeff</span><span class="p">,</span><span class="w"> </span><span class="n">intercept</span><span class="p">);</span><span class="w"></span>
@@ -13723,23 +13696,23 @@ a.anchor-link {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>coeff: 
-  ┌                        ┐
-  │   -0.11963654326027438 │
-  │    0.03863925768082262 │
-  │    0.06701609736726818 │
-  │     2.6294387902232588 │
-  │    -20.967597318457692 │
-  │      4.103904424216056 │
-  │ -0.0004976572448448192 │
-  │    -1.5323807191105798 │
-  │     0.3504819395269898 │
-  │  -0.014317291144885353 │
-  │    -0.9360162870500541 │
-  │   0.007758241070872939 │
-  │    -0.5686368353652307 │
-  └                        ┘
+  ┌                       ┐
+  │  -0.06162990533095337 │
+  │   0.04300822718705109 │
+  │   0.06536511761697435 │
+  │    3.1530150444836917 │
+  │     -19.5870126994823 │
+  │    3.6945169534169398 │
+  │  0.006685009127805426 │
+  │   -1.3921812097201318 │
+  │    0.3110429415073153 │
+  │ -0.012486793494871928 │
+  │    -0.974980194868809 │
+  │  0.010996331673317889 │
+  │   -0.5546406878182586 │
+  └                       ┘
 
-, intercept: 37.433089824040124
+, intercept: 37.10300123020261
 </pre>
 </div>
 </div>
@@ -13750,7 +13723,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">y_hat_qr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x_test</span><span class="p">.</span><span class="n">clone</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&amp;</span><span class="n">coeff</span><span class="p">).</span><span class="n">add_scalar</span><span class="p">(</span><span class="n">intercept</span><span class="p">);</span><span class="w"></span>
@@ -13763,7 +13736,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_hat_qr</span><span class="p">.</span><span class="n">transpose</span><span class="p">())</span><span class="w"></span>
@@ -13779,56 +13752,15 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3.108186495937896</pre>
+<pre>2.905824437460306</pre>
 </div>
 
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;y_hat: {}, y_true: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y_hat_qr</span><span class="p">.</span><span class="n">transpose</span><span class="p">().</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">),</span><span class="w"> </span><span class="n">y_test</span><span class="p">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>y_hat: 
-  ┌                                                                                                ┐
-  │  28.39971210805763  18.23102954736146 20.916178691201022 10.768226700425757 13.423367602418757 │
-  └                                                                                                ┘
-
-, y_true: 
-  ┌                          ┐
-  │ 36.2 18.2   21 12.7 13.5 │
-  └                          ┘
-
-
-</pre>
-</div>
 </div>
 
 </div>
@@ -13837,7 +13769,7 @@ a.anchor-link {
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">smartcore</span>::<span class="n">linear</span>::<span class="n">linear_regression</span>::<span class="n">LinearRegression</span><span class="p">;</span><span class="w"></span>
@@ -13850,109 +13782,14 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">lr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LinearRegression</span>::<span class="n">fit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_train</span><span class="p">.</span><span class="n">clone</span><span class="p">(),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_train</span><span class="p">.</span><span class="n">clone</span><span class="p">(),</span><span class="w"> </span><span class="nb">Default</span>::<span class="n">default</span><span class="p">()).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="n">lr_coeff</span>: <span class="nc">DMatrix</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lr</span><span class="p">.</span><span class="n">coefficients</span><span class="p">();</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="n">lr_intercept</span>: <span class="kt">f64</span> <span class="o">=</span><span class="w"> </span><span class="n">lr</span><span class="p">.</span><span class="n">intercept</span><span class="p">();</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;coeff: {}, intercept: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lr_coeff</span><span class="p">,</span><span class="w"> </span><span class="n">lr_intercept</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>coeff: 
-  ┌                        ┐
-  │   -0.11963654326027114 │
-  │   0.038639257680820216 │
-  │    0.06701609736725139 │
-  │     2.6294387902237863 │
-  │      -20.9675973184574 │
-  │      4.103904424216038 │
-  │ -0.0004976572448452832 │
-  │     -1.532380719110571 │
-  │     0.3504819395269736 │
-  │  -0.014317291144884357 │
-  │    -0.9360162870500446 │
-  │     0.0077582410708724 │
-  │    -0.5686368353652304 │
-  └                        ┘
-
-, intercept: 37.43308982404
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">lr_y_hat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lr</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_test</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lr_y_hat</span><span class="p">)</span><span class="w"></span>
+<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">lr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LinearRegression</span>::<span class="n">fit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_train</span><span class="p">.</span><span class="n">clone</span><span class="p">(),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_train</span><span class="p">.</span><span class="n">clone</span><span class="p">(),</span><span class="w"> </span><span class="nb">Default</span>::<span class="n">default</span><span class="p">()).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">lr_y_hat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lr</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_test</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[35]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3.1081864959378716</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13962,190 +13799,6 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;y_hat: {}, y_true: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lr_y_hat</span><span class="p">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">),</span><span class="w"> </span><span class="n">y_test</span><span class="p">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>y_hat: 
-  ┌                                                                                                ┐
-  │  28.39971210805765 18.231029547361494 20.916178691201043 10.768226700425803 13.423367602418857 │
-  └                                                                                                ┘
-
-, y_true: 
-  ┌                          ┐
-  │ 36.2 18.2   21 12.7 13.5 │
-  └                          ┘
-
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">csv</span>::<span class="p">{</span><span class="n">ReaderBuilder</span><span class="p">,</span><span class="w"> </span><span class="n">WriterBuilder</span><span class="p">};</span><span class="w"></span>
-<span class="k">use</span><span class="w"> </span><span class="n">ndarray</span>::<span class="p">{</span><span class="n">Array</span><span class="p">,</span><span class="w"> </span><span class="n">Array2</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">};</span><span class="w"></span>
-<span class="k">use</span><span class="w"> </span><span class="n">ndarray_csv</span>::<span class="p">{</span><span class="n">Array2Reader</span><span class="p">,</span><span class="w"> </span><span class="n">Array2Writer</span><span class="p">};</span><span class="w"></span>
-<span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">error</span>::<span class="n">Error</span><span class="p">;</span><span class="w"></span>
-<span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">fs</span>::<span class="n">File</span><span class="p">;</span><span class="w"></span>
-
-<span class="c1">// Read Boston Housing Data from a CSV file</span>
-<span class="kd">let</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span>::<span class="n">open</span><span class="p">(</span><span class="s">&quot;../data/boston.csv&quot;</span><span class="p">)</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ReaderBuilder</span>::<span class="n">new</span><span class="p">().</span><span class="n">has_headers</span><span class="p">(</span><span class="kc">false</span><span class="p">).</span><span class="n">from_reader</span><span class="p">(</span><span class="n">file</span><span class="p">);</span><span class="w"></span>
-<span class="c1">// and turn data into a NxM matrix</span>
-<span class="kd">let</span><span class="w"> </span><span class="n">bos</span>: <span class="nc">Array2</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="n">deserialize_array2</span><span class="p">((</span><span class="mi">506</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">))</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bos</span><span class="p">.</span><span class="n">slice</span><span class="p">(</span><span class="n">s</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">..,</span><span class="w"> </span><span class="mi">0</span><span class="p">..</span><span class="mi">13</span><span class="p">]).</span><span class="n">to_owned</span><span class="p">();</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bos</span><span class="p">.</span><span class="n">column</span><span class="p">(</span><span class="mi">13</span><span class="p">).</span><span class="n">to_owned</span><span class="p">();</span><span class="w"></span>
-<span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">shape</span><span class="p">())</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[38]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>([506, 13], [506])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;x: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">slice</span><span class="p">(</span><span class="n">s</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">..]));</span><span class="w"></span>
-<span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;y: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">slice</span><span class="p">(</span><span class="n">s</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="mi">5</span><span class="p">]));</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>x: [[0.00632, 18, 2.31, 0, 0.538, 6.575, 65.2, 4.09, 1, 296, 15.3, 396.9, 4.98],
- [0.02731, 0, 7.07, 0, 0.469, 6.421, 78.9, 4.9671, 2, 242, 17.8, 396.9, 9.14],
- [0.02729, 0, 7.07, 0, 0.469, 7.185, 61.1, 4.9671, 2, 242, 17.8, 392.83, 4.03],
- [0.03237, 0, 2.18, 0, 0.458, 6.998, 45.8, 6.0622, 3, 222, 18.7, 394.63, 2.94],
- [0.06905, 0, 2.18, 0, 0.458, 7.147, 54.2, 6.0622, 3, 222, 18.7, 396.9, 5.33]]
-y: [24, 21.6, 34.7, 33.4, 36.2]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="n">x_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="n">y_test</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">train_test_split</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span><span class="w"></span>
-<span class="p">(</span><span class="n">x_train</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">y_train</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">x_test</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">y_test</span><span class="p">.</span><span class="n">shape</span><span class="p">())</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[43]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>([388, 13], [388], [118, 13], [118])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">lr_y_hat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LinearRegression</span>::<span class="n">fit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="nb">Default</span>::<span class="n">default</span><span class="p">()).</span><span class="w"></span>
-<span class="w">                    </span><span class="n">and_then</span><span class="p">(</span><span class="o">|</span><span class="n">lr</span><span class="o">|</span><span class="w"> </span><span class="n">lr</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_test</span><span class="p">)).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lr_y_hat</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 
@@ -14159,47 +13812,15 @@ y: [24, 21.6, 34.7, 33.4, 36.2]
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[46]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3.5736947867842512</pre>
+<pre>2.9058244374601854</pre>
 </div>
 
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;y_hat: {}</span><span class="se">\n</span><span class="s">y_true: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lr_y_hat</span><span class="p">.</span><span class="n">slice</span><span class="p">(</span><span class="n">s</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="mi">5</span><span class="p">]),</span><span class="w"> </span><span class="n">y_test</span><span class="p">.</span><span class="n">slice</span><span class="p">(</span><span class="n">s</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="mi">5</span><span class="p">]));</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>y_hat: [29.09793996553453, 19.44323628726571, 18.846586897221364, 21.721327644055297, 16.870683706691565]
-y_true: [33.4, 27.1, 15, 18.9, 17.5]
-</pre>
-</div>
 </div>
 
 </div>
@@ -14208,7 +13829,7 @@ y_true: [33.4, 27.1, 15, 18.9, 17.5]
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">smartcore</span>::<span class="n">ensemble</span>::<span class="n">random_forest_regressor</span>::<span class="n">RandomForestRegressor</span><span class="p">;</span><span class="w"></span>
@@ -14221,7 +13842,7 @@ y_true: [33.4, 27.1, 15, 18.9, 17.5]
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">rf_y_hat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RandomForestRegressor</span>::<span class="n">fit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="nb">Default</span>::<span class="n">default</span><span class="p">()).</span><span class="w"></span>
@@ -14235,7 +13856,7 @@ y_true: [33.4, 27.1, 15, 18.9, 17.5]
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rf_y_hat</span><span class="p">)</span><span class="w"></span>
@@ -14251,47 +13872,15 @@ y_true: [33.4, 27.1, 15, 18.9, 17.5]
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[51]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>2.3541988162496597</pre>
+<pre>2.1732080472022446</pre>
 </div>
 
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;y_hat: {}</span><span class="se">\n</span><span class="s">y_true: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rf_y_hat</span><span class="p">.</span><span class="n">slice</span><span class="p">(</span><span class="n">s</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="mi">5</span><span class="p">]),</span><span class="w"> </span><span class="n">y_test</span><span class="p">.</span><span class="n">slice</span><span class="p">(</span><span class="n">s</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="mi">5</span><span class="p">]));</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>y_hat: [35.85, 20.299999999999994, 19.789999999999996, 22.14, 18.759999999999945]
-y_true: [33.4, 27.1, 15, 18.9, 17.5]
-</pre>
-</div>
 </div>
 
 </div>

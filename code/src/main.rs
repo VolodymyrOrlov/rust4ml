@@ -1,14 +1,13 @@
 use argmin::prelude::*;
 use argmin::solver::linesearch::{ArmijoCondition, BacktrackingLineSearch};
 use argmin::solver::quasinewton::LBFGS;
-use nalgebra::{DMatrix, DVector, RowDVector, Scalar};
+use nalgebra::{DMatrix, DVector, Scalar};
 
 use std::io::prelude::*;
 use std::io::BufReader;
 use std::fs::File;
 use std::str::FromStr;
 
-use smartcore::linalg::nalgebra_bindings::*;
 use smartcore::metrics::roc_auc_score;
 use smartcore::model_selection::train_test_split;
 
@@ -149,31 +148,21 @@ fn predict(x: &DMatrix<f64>, coeff: &DVector<f64>, intercept: f64) -> DVector<f6
 }
 
 fn main() {    
-}
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+    let file = File::open("../data/creditcard.csv").unwrap();
+    let credit: DMatrix<f64> = parse_csv(BufReader::new(file)).unwrap(); 
     
-    #[test]
-    fn logistic_regression() {
+    let x = credit.columns(0, 30).into_owned();
+    let y = credit.column(30).into_owned(); 
 
-        let file = File::open("../data/creditcard.csv").unwrap();
-        let credit: DMatrix<f64> = parse_csv(BufReader::new(file)).unwrap(); 
-        
-        let x = credit.columns(0, 30).into_owned();
-        let y = credit.column(30).into_owned(); 
+    let (x_train, x_test, y_train, y_test) = train_test_split(&x, &y.transpose(), 0.2, true);
 
-        let (x_train, x_test, y_train, y_test) = train_test_split(&x, &y.transpose(), 0.2);
+    let (coeff, intercept) = optimize(&x_train, &y_train.transpose()).unwrap();
 
-        let (coeff, intercept) = optimize(&x_train, &y_train.transpose()).unwrap();
+    println!("coefficients: {}", coeff);
+    println!("intercept: {}", intercept);
 
-        println!("{}", coeff);
-        println!("{}", intercept);
+    let y_hat = predict(&x_test, &coeff, intercept);
 
-        let y_hat = predict(&x_test, &coeff, intercept);
-
-        println!("{}", roc_auc_score(&y_test, &y_hat.transpose()));
-
-    }
+    println!("AUC score: {}", roc_auc_score(&y_test, &y_hat.transpose()));
 }

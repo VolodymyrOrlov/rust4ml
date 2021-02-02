@@ -7,8 +7,8 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-smartcore = { version = "0.1.0", features=["nalgebra-bindings", "ndarray-bindings", "datasets"]}
+smartcore = { version = "0.2.0", features=["nalgebra-bindings", "ndarray-bindings", "datasets"]}
 csv = "1.1.5"
-ndarray = { version="0.13.1", features = ["serde-1"]}
-nalgebra = { version="0.22.0", features = ["serde-serialize"]}
+ndarray = { version="0.14.0", features = ["serde-1"]}
+nalgebra = { version="0.23.0", features = ["serde-serialize"]}
 argmin = "0.3.1"

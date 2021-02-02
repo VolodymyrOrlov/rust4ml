@@ -13201,11 +13201,11 @@ a.anchor-link {
 <section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span>:<span class="nc">dep</span><span class="w"> </span><span class="n">smartcore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.1.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">features</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;nalgebra-bindings&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ndarray-bindings&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;datasets&quot;</span><span class="p">]}</span><span class="w"></span>
-:<span class="nc">dep</span><span class="w"> </span><span class="n">nalgebra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.22.0&quot;</span><span class="w"></span>
+<div class=" highlight hl-Rust"><pre><span></span>:<span class="nc">dep</span><span class="w"> </span><span class="n">smartcore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.2.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">features</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;nalgebra-bindings&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;datasets&quot;</span><span class="p">]}</span><span class="w"></span>
+:<span class="nc">dep</span><span class="w"> </span><span class="n">nalgebra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.23.0&quot;</span><span class="w"></span>
 :<span class="nc">dep</span><span class="w"> </span><span class="n">argmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.3.1&quot;</span><span class="w"></span>
 </pre></div>
 
@@ -13219,45 +13219,10 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">nalgebra</span>::<span class="p">{</span><span class="n">DMatrix</span><span class="p">,</span><span class="w"> </span><span class="n">DVector</span><span class="p">,</span><span class="w"> </span><span class="n">RowDVector</span><span class="p">,</span><span class="w"> </span><span class="n">Scalar</span><span class="p">};</span><span class="w"></span>
+<div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">nalgebra</span>::<span class="p">{</span><span class="n">DMatrix</span><span class="p">,</span><span class="w"> </span><span class="n">DVector</span><span class="p">,</span><span class="w"> </span><span class="n">Scalar</span><span class="p">};</span><span class="w"></span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span>::<span class="n">open</span><span class="p">(</span><span class="s">&quot;../data/creditcard.csv&quot;</span><span class="p">)</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="n">credit</span>: <span class="nc">DMatrix</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parse_csv</span><span class="p">(</span><span class="n">BufReader</span>::<span class="n">new</span><span class="p">(</span><span class="n">file</span><span class="p">))</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
-<span class="n">credit</span><span class="p">.</span><span class="n">shape</span><span class="p">()</span><span class="w"></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(984, 31)</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13267,9 +13232,9 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">credit</span><span class="p">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">).</span><span class="n">into_owned</span><span class="p">();</span><span class="w"></span>
-<span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">credit</span><span class="p">.</span><span class="n">column</span><span class="p">(</span><span class="mi">30</span><span class="p">).</span><span class="n">into_owned</span><span class="p">();</span><span class="w"></span>
-<span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">shape</span><span class="p">())</span><span class="w"></span>
+<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span>::<span class="n">open</span><span class="p">(</span><span class="s">&quot;../data/creditcard.csv&quot;</span><span class="p">)</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">credit</span>: <span class="nc">DMatrix</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parse_csv</span><span class="p">(</span><span class="n">BufReader</span>::<span class="n">new</span><span class="p">(</span><span class="n">file</span><span class="p">))</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
+<span class="n">credit</span><span class="p">.</span><span class="n">shape</span><span class="p">()</span><span class="w"></span>
 </pre></div>
 
     </div>
@@ -13288,7 +13253,7 @@ a.anchor-link {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>((984, 30), (984, 1))</pre>
+<pre>(984, 31)</pre>
 </div>
 
 </div>
@@ -13302,6 +13267,41 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">credit</span><span class="p">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">).</span><span class="n">into_owned</span><span class="p">();</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">credit</span><span class="p">.</span><span class="n">column</span><span class="p">(</span><span class="mi">30</span><span class="p">).</span><span class="n">into_owned</span><span class="p">();</span><span class="w"></span>
+<span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">shape</span><span class="p">())</span><span class="w"></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>((984, 30), (984, 1))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">smartcore</span>::<span class="n">model_selection</span>::<span class="n">train_test_split</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 
@@ -13312,10 +13312,10 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="n">x_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="n">y_test</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">train_test_split</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">.</span><span class="n">transpose</span><span class="p">(),</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span><span class="w"></span>
+<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="n">x_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="n">y_test</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">train_test_split</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">.</span><span class="n">transpose</span><span class="p">(),</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"></span>
 <span class="p">(</span><span class="n">x_train</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">y_train</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">x_test</span><span class="p">.</span><span class="n">shape</span><span class="p">(),</span><span class="w"> </span><span class="n">y_test</span><span class="p">.</span><span class="n">shape</span><span class="p">())</span><span class="w"></span>
 </pre></div>
 
@@ -13329,13 +13329,13 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>((804, 30), (1, 804), (180, 30), (1, 180))</pre>
+<pre>((788, 30), (1, 788), (196, 30), (1, 196))</pre>
 </div>
 
 </div>
@@ -13353,9 +13353,22 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h2><ul>
+<li>Estimated probability (our response is either 1 or 0): $P(X) = \sigma({X}\beta)$</li>
+<li>Cost function: 
+$$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 - \sigma({X}\beta))]$$</li>
+<li>Derivative: $\frac{\partial J(\beta)}{\partial \beta} = \frac{1}{n} X^T(\sigma(X\beta) - y)$</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">fn</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">v</span>: <span class="kt">f64</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">f64</span> <span class="p">{</span><span class="w"></span>
@@ -13374,22 +13387,9 @@ a.anchor-link {
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h2><ul>
-<li>Estimated probability (our response is either 1 or 0): $P(X) = \sigma({X}\beta)$</li>
-<li>Cost function: 
-$$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 - \sigma({X}\beta))]$$</li>
-<li>Derivative: $\frac{\partial J(\beta)}{\partial \beta} = \frac{1}{n} X^T(\sigma(X\beta) - y)$</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="c1">// y_true = 1.0, y_hat -&gt; +inf</span>
@@ -13408,7 +13408,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[87]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -13425,7 +13425,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="c1">// y_true = 1.0, y_hat -&gt; -inf</span>
@@ -13444,7 +13444,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[81]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -13461,7 +13461,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="c1">// y_true = 0.0, y_hat -&gt; +inf</span>
@@ -13480,7 +13480,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[82]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13497,7 +13497,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="c1">// y_true = 0.0, y_hat -&gt; -inf</span>
@@ -13516,7 +13516,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[83]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -13533,7 +13533,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">argmin</span>::<span class="n">prelude</span>::<span class="o">*</span><span class="p">;</span><span class="w"></span>
@@ -13548,7 +13548,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">struct</span> <span class="nc">LossFunction</span><span class="o">&lt;</span><span class="na">&#39;a</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -13564,7 +13564,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">impl</span><span class="o">&lt;</span><span class="na">&#39;a</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ArgminOp</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">LossFunction</span><span class="o">&lt;</span><span class="na">&#39;a</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -13613,7 +13613,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">fn</span> <span class="nf">optimize</span><span class="p">(</span><span class="n">x</span>: <span class="kp">&amp;</span><span class="nc">DMatrix</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span>: <span class="kp">&amp;</span><span class="nc">DVector</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="p">(</span><span class="n">DVector</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="kt">f64</span><span class="p">),</span><span class="w"> </span><span class="n">Error</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">      </span>
@@ -13653,7 +13653,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">coeff</span><span class="p">,</span><span class="w"> </span><span class="n">intercept</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">optimize</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_train</span><span class="p">.</span><span class="n">transpose</span><span class="p">()).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
@@ -13666,7 +13666,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;coeff: {}, intercept: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">coeff</span><span class="p">.</span><span class="n">rows</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">),</span><span class="w"> </span><span class="n">intercept</span><span class="p">);</span><span class="w"></span>
@@ -13687,15 +13687,15 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>coeff: 
-  ┌                          ┐
-  │ -0.000029086428558675878 │
-  │    -0.031008276588418204 │
-  │     -0.04175083130759226 │
-  │      -0.5853141446539952 │
-  │       0.8112769950796751 │
-  └                          ┘
+  ┌                         ┐
+  │ -0.00002199340166140066 │
+  │     -0.1664288930790421 │
+  │     0.13995614342760943 │
+  │     -0.2567790509969779 │
+  │      0.1661457909343891 │
+  └                         ┘
 
-, intercept: -0.45322948269666435
+, intercept: 0.0034212453591054544
 </pre>
 </div>
 </div>
@@ -13703,10 +13703,10 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">fn</span> <span class="nf">predict</span><span class="p">(</span><span class="n">x</span>: <span class="kp">&amp;</span><span class="nc">DMatrix</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">coeff</span>: <span class="kp">&amp;</span><span class="nc">DVector</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">intercept</span>: <span class="kt">f64</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">DVector</span><span class="o">&lt;</span><span class="kt">f64</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -13729,7 +13729,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">smartcore</span>::<span class="n">metrics</span>::<span class="n">roc_auc_score</span><span class="p">;</span><span class="w"></span>
@@ -13742,7 +13742,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">roc_auc_score</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">predict</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_test</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">coeff</span><span class="p">,</span><span class="w"> </span><span class="n">intercept</span><span class="p">).</span><span class="n">transpose</span><span class="p">())</span><span class="w"></span>
@@ -13758,13 +13758,13 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.9255952380952381</pre>
+<pre>0.9140372800166615</pre>
 </div>
 
 </div>
@@ -13775,7 +13775,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">smartcore</span>::<span class="n">linear</span>::<span class="n">logistic_regression</span>::<span class="n">LogisticRegression</span><span class="p">;</span><span class="w"></span>
@@ -13788,10 +13788,10 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">lr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LogisticRegression</span>::<span class="n">fit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_train</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
+<div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">lr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LogisticRegression</span>::<span class="n">fit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="nb">Default</span>::<span class="n">default</span><span class="p">()).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
 <span class="kd">let</span><span class="w"> </span><span class="n">y_hat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lr</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_test</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 
@@ -13802,7 +13802,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">roc_auc_score</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_hat</span><span class="p">)</span><span class="w"></span>
@@ -13818,13 +13818,13 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.9315476190476191</pre>
+<pre>0.9542330521711965</pre>
 </div>
 
 </div>
@@ -13835,7 +13835,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;y_hat: {}, y_true: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y_hat</span><span class="p">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">),</span><span class="w"> </span><span class="n">y_test</span><span class="p">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">));</span><span class="w"></span>
@@ -13857,12 +13857,12 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>y_hat: 
   ┌                     ┐
-  │ 1 1 0 0 1 1 0 1 0 1 │
+  │ 0 0 1 0 0 0 0 1 0 0 │
   └                     ┘
 
 , y_true: 
   ┌                     ┐
-  │ 1 1 0 1 1 1 0 1 0 1 │
+  │ 0 0 1 0 0 0 0 1 0 0 │
   └                     ┘
 
 
@@ -13876,7 +13876,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">smartcore</span>::<span class="n">ensemble</span>::<span class="n">random_forest_classifier</span>::<span class="n">RandomForestClassifier</span><span class="p">;</span><span class="w"></span>
@@ -13889,7 +13889,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="n">y_hat_rf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RandomForestClassifier</span>::<span class="n">fit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x_train</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_train</span><span class="p">,</span><span class="w"> </span><span class="nb">Default</span>::<span class="n">default</span><span class="p">()).</span><span class="w"></span>
@@ -13903,7 +13903,7 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Rust"><pre><span></span><span class="n">roc_auc_score</span><span class="p">(</span><span class="o">&amp;</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y_hat_rf</span><span class="p">)</span><span class="w"></span>
@@ -13919,13 +13919,13 @@ $$J(\beta) = -\frac{1}{n}\sum_{i=1}^n[y_i log(\sigma({X}\beta)) + (1- y_i)log(1 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.9375</pre>
+<pre>0.9643340622722066</pre>
 </div>
 
 </div>
